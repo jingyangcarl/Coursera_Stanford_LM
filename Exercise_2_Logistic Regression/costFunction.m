@@ -22,7 +22,7 @@ grad = zeros(size(theta));
 
 % Carl: [J, grad] = costFunction(theta, X, y)
 
-J = X(:,1)' * (-y .* log10(sigmoid(X*theta)) - (1-y) .* log10(1-sigmoid(X*theta))) / m;
+J = X(:,1)' * (-y .* log(sigmoid(X*theta)) - (1-y) .* log(1-sigmoid(X*theta))) / m;
 grad = X' * (sigmoid(X*theta) - y )/ m ;
 
 % =============================================================
